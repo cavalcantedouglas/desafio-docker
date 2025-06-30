@@ -1,0 +1,14 @@
+version: '3.8'
+
+
+services:
+  apache-server:
+    image: httpd:latest
+
+    container_name: meu_servidor_web_apache
+
+    ports:
+      - "8080:80"
+
+    volumes:
+      - ./app:/usr/local/apache2/htdocs/
